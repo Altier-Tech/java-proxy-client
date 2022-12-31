@@ -1,2 +1,3 @@
 # java-proxy-client
- Client application for JProxy
+
+Client application for JProxy

@@ -62,9 +62,18 @@ public class BrowserController {
     public void handleMenuButtonClick() {
         Main.logger.logln("Menu button was clicked!");
 
-        {
+        if (menuOpen) {
+            rightParent.getChildren().remove(menuBox);
+            menuOpen = false;
+        } else {
+            rightParent.getChildren().add(menuBox);
+            menuOpen = true;
+        }
+        try {
             menuOpen = true;
             rightParent.getChildren().add(menuBox);
+        } catch (Exception e) {
+            Main.logger.logln("Error while opening menu: " + e.getMessage());
         }
     }
 

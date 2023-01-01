@@ -5,8 +5,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
-
-import javafx.scene.web.*;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 
 import java.util.Stack;
 
@@ -39,7 +39,7 @@ public class BrowserController {
         history = new Stack<>();
         forwardHistory = new Stack<>();
 
-        HOME_URL = "https://google.com";    // TODO load from application.properties
+        HOME_URL = "https://www.google.lk/";    // TODO load from application.properties
         currentURL = HOME_URL;
 
         history.push(currentURL);
@@ -57,7 +57,7 @@ public class BrowserController {
         Main.logger.logln("Visiting URL: " + url);
         // TODO visit url
 
-        webView.getEngine().loadContent("<html><body><h1>" + url + "</h1></body></html>");
+        webView.getEngine().loadContent("<html><body><h1>Test</h1></body></html>");
     }
 
     @FXML

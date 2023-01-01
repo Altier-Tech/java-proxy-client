@@ -7,6 +7,8 @@ module tech.altier.JProxyClient {
     requires jackson.databind;
     requires jackson.core;
     requires javafx.web;
+//    requires javafx.media;
+//    requires javafx.web;
 
     opens tech.altier.JProxyClient to javafx.fxml;
     exports tech.altier.JProxyClient;

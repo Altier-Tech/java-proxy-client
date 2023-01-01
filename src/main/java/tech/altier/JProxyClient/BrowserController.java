@@ -57,7 +57,7 @@ public class BrowserController {
         Main.logger.logln("Visiting URL: " + url);
         // TODO visit url
 
-        webView.getEngine().loadContent("<html><body><h1>Test</h1></body></html>");
+        webView.getEngine().load("http://www.google.com");
     }
 
     @FXML
@@ -84,8 +84,7 @@ public class BrowserController {
     @FXML
     public void handleRefreshButtonClick(ActionEvent actionEvent) {
         Main.logger.logln("Refresh button was clicked!");
-        // TODO refresh page
-
+        visitURL(currentURL);
     }
 
     @FXML

@@ -1,11 +1,9 @@
 package tech.altier.JProxyClient;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
-import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
 import java.util.Stack;
@@ -57,38 +55,38 @@ public class BrowserController {
         Main.logger.logln("Visiting URL: " + url);
         // TODO visit url
 
-        webView.getEngine().load("http://www.google.com");
+        webView.getEngine().load("https://www.google.com");
     }
 
     @FXML
-    public void handleAddressBarAction(ActionEvent actionEvent) {
+    public void handleAddressBarAction() {
 //        if (!history.isEmpty()) if (history.peek().equals(addressBar.getText())) reloadPage();
         if (!currentURL.isEmpty()) history.push(currentURL);
         visitURL(addressBar.getText());
     }
 
     @FXML
-    public void handleBackButtonClick(ActionEvent actionEvent) {
+    public void handleBackButtonClick() {
         Main.logger.logln("Back button was clicked!");
         forwardHistory.push(currentURL);
         visitURL(history.pop());
     }
 
     @FXML
-    public void handleNextButtonClick(ActionEvent actionEvent) {
+    public void handleNextButtonClick() {
         Main.logger.logln("Next button was clicked!");
         if (!history.peek().equals(currentURL)) history.push(currentURL);
         visitURL(forwardHistory.pop());
     }
 
     @FXML
-    public void handleRefreshButtonClick(ActionEvent actionEvent) {
+    public void handleRefreshButtonClick() {
         Main.logger.logln("Refresh button was clicked!");
         visitURL(currentURL);
     }
 
     @FXML
-    public void handleMenuButtonClick(ActionEvent actionEvent) {
+    public void handleMenuButtonClick() {
         Main.logger.logln("Menu button was clicked!");
         // TODO show menu
     }

@@ -29,4 +29,7 @@ public class BrowserController {
 
     public void handleBackButtonClick(ActionEvent actionEvent) {
     }
+
+    public void handleForwardButtonClick(ActionEvent actionEvent) {
+    }
 }

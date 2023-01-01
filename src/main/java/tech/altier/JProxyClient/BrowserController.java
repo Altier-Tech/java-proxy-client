@@ -37,7 +37,8 @@ public class BrowserController {
 
         tempLastURL = "";
         HOME_URL = "https://google.com";    // TODO load from application.properties
-
+        currentURL = HOME_URL;
+        
         visitURL(HOME_URL);
     }
 
@@ -45,7 +46,7 @@ public class BrowserController {
         currentURL = url;
 
         // Adding to stack
-        if (!tempLastURL.equals(currentURL)) history.push(url);
+//        if (!tempLastURL.equals(currentURL)) history.push(url);
 
         // Set button states
         backButton.setDisable(history.size() <= 1);
@@ -55,6 +56,12 @@ public class BrowserController {
         Main.logger.logln("Visiting URL: " + url);
         // TODO visit url
 
+    }
+
+    @FXML
+    public void handleAddressBarAction(ActionEvent actionEvent) {
+        if (! currentURL.isBlank()) history.push(currentURL);
+        visitURL(addressBar.getText());
     }
 
     @FXML
@@ -90,11 +97,6 @@ public class BrowserController {
     public void handleHomeButtonClick() {
         Main.logger.logln("Home button was clicked!");
         visitURL(HOME_URL);
-    }
-
-    @FXML
-    public void handleAddressBarAction(ActionEvent actionEvent) {
-        visitURL(addressBar.getText());
     }
 
     private void initializeTopBar() {

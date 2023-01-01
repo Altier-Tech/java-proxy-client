@@ -70,11 +70,13 @@ public class BrowserController {
     public void handleRefreshButtonClick(ActionEvent actionEvent) {
         Main.logger.logln("Refresh button was clicked!");
         // TODO refresh page
-        
+
     }
 
     @FXML
     public void handleMenuButtonClick(ActionEvent actionEvent) {
+        Main.logger.logln("Menu button was clicked!");
+        // TODO show menu
     }
 
     @FXML

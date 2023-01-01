@@ -43,7 +43,7 @@
 
     <!-- Browser view -->
     <center>
-        <WebView fx:id="webView" >
+        <WebView fx:id="webView">
          <BorderPane.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
          </BorderPane.margin>

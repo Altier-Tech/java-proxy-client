@@ -68,7 +68,6 @@ public class BrowserController {
     @FXML
     public void handleMenuButtonClick() {
         Main.logger.logln("Menu button was clicked!");
-
         try {
             if (menuOpen) {
                 rightParent.getChildren().remove(menuBox);

@@ -59,7 +59,7 @@ public class BrowserController {
         nextButton.setDisable(forwardHistory.isEmpty());
         backButton.setDisable(history.size() == 1 && history.peek().equalsIgnoreCase(HOME_URL));
 
-        menuBox.setVisible(false);
+        menuBox.getChildren().remove(menuBox);
 
         Main.logger.logln("Visiting URL: " + url);
 

@@ -10,6 +10,9 @@ public class BrowserController {
     Button homeButton;
     @FXML
     Button backButton;
+    @FXML
+    Button forwardButton;
+    
 
     public void initialize() {
         initializeTopBar();

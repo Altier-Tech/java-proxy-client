@@ -6,6 +6,7 @@ module tech.altier.JProxyClient {
     requires org.kordamp.bootstrapfx.core;
     requires jackson.databind;
     requires jackson.core;
+    requires javafx.web;
 
     opens tech.altier.JProxyClient to javafx.fxml;
     exports tech.altier.JProxyClient;

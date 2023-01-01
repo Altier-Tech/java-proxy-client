@@ -40,4 +40,9 @@
         </HBox>
     </top>
 
+    <!-- Browser view -->
+    <center>
+        <WebView fx:id="browserView" />
+    </center>
+
 </BorderPane>

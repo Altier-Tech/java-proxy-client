@@ -8,6 +8,8 @@ import javafx.scene.image.ImageView;
 public class BrowserController {
     @FXML
     Button homeButton;
+    @FXML
+    Button backButton;
 
     public void initialize() {
         initializeTopBar();

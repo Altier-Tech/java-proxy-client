@@ -32,4 +32,7 @@ public class BrowserController {
 
     public void handleForwardButtonClick(ActionEvent actionEvent) {
     }
+
+    public void handleRefreshButtonClick(ActionEvent actionEvent) {
+    }
 }

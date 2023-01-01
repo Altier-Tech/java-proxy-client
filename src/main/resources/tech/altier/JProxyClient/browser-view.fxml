@@ -8,7 +8,7 @@
 
     <!-- Browser controls -->
     <top>
-        
+        <Button fx:id="homeButton" onAction="#handleHomeButtonClick" />
     </top>
 
 </BorderPane>

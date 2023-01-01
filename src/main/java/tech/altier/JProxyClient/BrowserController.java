@@ -68,8 +68,7 @@ public class BrowserController {
     public void handleBackButtonClick(ActionEvent actionEvent) {
         Main.logger.logln("Back button was clicked!");
         forwardHistory.push(currentURL);
-        currentURL = history.pop();
-        visitURL(currentURL);
+        visitURL(history.pop());
     }
 
     @FXML

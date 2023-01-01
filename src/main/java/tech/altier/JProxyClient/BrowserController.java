@@ -35,6 +35,7 @@ public class BrowserController {
     public void handleForwardButtonClick(ActionEvent actionEvent) {
     }
 
+    @FXML
     public void handleRefreshButtonClick(ActionEvent actionEvent) {
     }
 

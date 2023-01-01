@@ -1,5 +1,6 @@
 package tech.altier.JProxyClient;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
@@ -24,5 +25,8 @@ public class BrowserController {
     @FXML
     public void handleHomeButtonClick() {
         System.out.println("Home button clicked!");
+    }
+
+    public void handleBackButtonClick(ActionEvent actionEvent) {
     }
 }

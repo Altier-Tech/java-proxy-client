@@ -27,7 +27,7 @@ public class BrowserController {
     public void initialize() {
         initializeTopBar();
 
-        HOME_URL = "https://google.com";
+        HOME_URL = "https://google.com";    // TODO load from application.properties
 
         visitURL(HOME_URL);
     }

@@ -57,7 +57,7 @@ public class BrowserController {
 
     @FXML
     public void handleBackButtonClick(ActionEvent actionEvent) {
-        Main.logger.log("Back button -> ");
+        Main.logger.logln("Back button was clicked!");
         String url = history.pop();
         forwardHistory.push(url);
         tempLastVisitedURL = url;
@@ -66,7 +66,7 @@ public class BrowserController {
 
     @FXML
     public void handleNextButtonClick(ActionEvent actionEvent) {
-        Main.logger.log("Next button -> ");
+        Main.logger.logln("Next button was clicked!");
         String url = forwardHistory.pop();
         history.push(url);
         visitURL(url);
@@ -74,7 +74,7 @@ public class BrowserController {
 
     @FXML
     public void handleRefreshButtonClick(ActionEvent actionEvent) {
-        Main.logger.log("Refresh button -> ");
+        Main.logger.logln("Refresh button was clicked!");
         // TODO refresh page
 
     }

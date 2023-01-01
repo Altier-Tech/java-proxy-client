@@ -63,8 +63,6 @@ public class BrowserController {
         nextButton.setDisable(forwardHistory.isEmpty());
         backButton.setDisable(history.size() == 1 && history.peek().equalsIgnoreCase(HOME_URL));
 
-        rightParent.getChildren().add(menuBox);
-
         Main.logger.logln("Visiting URL: " + url);
 
         engine.load(url);
@@ -74,6 +72,8 @@ public class BrowserController {
     public void handleMenuButtonClick() {
         Main.logger.logln("Menu button was clicked!");
         // TODO show menu
+
+        rightParent.getChildren().add(menuBox);
     }
 
     @FXML

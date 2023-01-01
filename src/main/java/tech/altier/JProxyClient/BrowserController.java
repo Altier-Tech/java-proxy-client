@@ -45,6 +45,7 @@ public class BrowserController {
         // Set button states
         backButton.setDisable(history.size() <= 1);
         nextButton.setDisable(forwardHistory.size() <= 1);
+        if (history.size()==1 && history.pop()=="https://google.com") homeButton.setDisable(true);
 
         Main.logger.log("Visiting URL: " + url);
         // TODO visit url

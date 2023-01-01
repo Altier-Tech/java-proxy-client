@@ -42,6 +42,13 @@ public class BrowserController {
         // Adding to stack
         history.push(url);
 
+        // Set button states
+        if (history.size() > 1) {
+            backButton.setDisable(false);
+        } else {
+            backButton.setDisable(true);
+        }
+
         Main.logger.log("Visiting URL: " + url);
         // TODO visit url
 

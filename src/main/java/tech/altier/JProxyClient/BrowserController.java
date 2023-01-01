@@ -52,7 +52,7 @@ public class BrowserController {
 
     @FXML
     public void handleAddressBarAction(ActionEvent actionEvent) {
-        visitURL();
+        visitURL(addressBar.getText());
     }
 
     private void initializeTopBar() {

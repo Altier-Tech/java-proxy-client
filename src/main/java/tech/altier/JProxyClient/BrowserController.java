@@ -27,7 +27,6 @@ public class BrowserController {
     private Stack<String> history;
     private Stack<String> forwardHistory;
     private String currentURL;
-    private String tempLastURL;
 
     public void initialize() {
         initializeTopBar();
@@ -35,10 +34,10 @@ public class BrowserController {
         history = new Stack<>();
         forwardHistory = new Stack<>();
 
-        tempLastURL = "";
         HOME_URL = "https://google.com";    // TODO load from application.properties
         currentURL = HOME_URL;
 
+        history.push(currentURL);
         visitURL(currentURL);
     }
 

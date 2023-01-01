@@ -70,7 +70,7 @@ public class BrowserController {
     @FXML
     public void handleExitButtonClick(ActionEvent actionEvent) {
         Main.logger.logln("Exit button was clicked!");
-
+        Main.primaryStage.close();
     }
 
     @FXML

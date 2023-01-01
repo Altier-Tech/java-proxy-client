@@ -36,6 +36,7 @@ public class BrowserController {
     private VBox rightParent;
 
     private String HOME_URL;
+    private String ABOUT_URL;
     private Stack<String> history;
     private Stack<String> forwardHistory;
     private String currentURL;
@@ -55,7 +56,9 @@ public class BrowserController {
         history = new Stack<>();
         forwardHistory = new Stack<>();
 
-        HOME_URL = "https://www.google.lk/";    // TODO load from application.properties
+        // TODO load from application.properties
+        HOME_URL = "https://www.google.lk/";
+        ABOUT_URL = "http://about.altier.tech/";
         currentURL = HOME_URL;
 
         history.push(currentURL);
@@ -178,6 +181,6 @@ public class BrowserController {
     @FXML
     public void handleAboutButtonClick(ActionEvent actionEvent) {
         Main.logger.logln("About button was clicked!");
-        engine.load("http://about.altier.tech");
+        engine.load(ABOUT_URL);
     }
 }

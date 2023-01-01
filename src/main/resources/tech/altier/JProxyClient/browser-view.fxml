@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.BorderPane?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="tech.altier.JProxyClient.BrowserController">
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="tech.altier.JProxyClient.BrowserController">
 
-</VBox>
+    
+
+</BorderPane>

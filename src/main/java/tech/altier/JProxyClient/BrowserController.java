@@ -1,5 +1,11 @@
 package tech.altier.JProxyClient;
 
-public class BrowserController {
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 
+public class BrowserController {
+    @FXML
+    Button homeButton;
+
+    
 }

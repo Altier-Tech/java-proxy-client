@@ -73,7 +73,7 @@ public class BrowserController {
     @FXML
     public void handleSettingsButtonClick() {
         Main.logger.logln("Settings button was clicked!");
-
+        menuBox.setVisible(true);
     }
 
     @FXML

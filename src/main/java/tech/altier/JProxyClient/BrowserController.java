@@ -14,6 +14,8 @@ public class BrowserController {
     Button forwardButton;
     @FXML
     Button refreshButton;
+    @FXML
+    Button menuButton;
 
     public void initialize() {
         initializeTopBar();

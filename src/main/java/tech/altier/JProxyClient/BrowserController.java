@@ -19,6 +19,12 @@ public class BrowserController {
 
     public void initialize() {
         initializeTopBar();
+
+        visitURL("https://google.com");
+    }
+
+    private void visitURL(String url) {
+        
     }
 
     @FXML

@@ -1,20 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="tech.altier.JProxyClient.BrowserController">
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tech.altier.JProxyClient.BrowserController">
 
     <!-- Browser controls -->
     <top>
         <HBox>
-            <Button fx:id="homeButton" onAction="#handleHomeButtonClick" prefHeight="30.0" prefWidth="30.0" />
-            <Button fx:id="backButton" onAction="#handleBackButtonClick" prefHeight="30.0" prefWidth="30.0" />
-            <Button fx:id="nextButton" onAction="#handleNextButtonClick" prefHeight="30.0" prefWidth="30.0" />
+            <Button fx:id="homeButton" onAction="#handleHomeButtonClick" prefHeight="30.0" prefWidth="30.0">
+            <HBox.margin>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </HBox.margin></Button>
+            <Button fx:id="backButton" onAction="#handleBackButtonClick" prefHeight="30.0" prefWidth="30.0">
+            <HBox.margin>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </HBox.margin></Button>
+            <Button fx:id="nextButton" onAction="#handleNextButtonClick" prefHeight="30.0" prefWidth="30.0">
+            <HBox.margin>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </HBox.margin></Button>
             <!-- Address Bar -->
-            <TextField fx:id="addressBar" onAction="#handleAddressBarAction" prefHeight="30.0" prefWidth="200.0" />
-            <Button fx:id="refreshButton" onAction="#handleRefreshButtonClick" prefHeight="30.0" prefWidth="30.0" />
-            <Button fx:id="menuButton" onAction="#handleMenuButtonClick" prefHeight="30.0" prefWidth="30.0" />
+            <TextField fx:id="addressBar" onAction="#handleAddressBarAction" prefHeight="30.0" prefWidth="200.0" promptText="type web url here">
+            <HBox.margin>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </HBox.margin></TextField>
+            <Button fx:id="refreshButton" onAction="#handleRefreshButtonClick" prefHeight="30.0" prefWidth="30.0">
+            <HBox.margin>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </HBox.margin></Button>
+            <Button fx:id="menuButton" onAction="#handleMenuButtonClick" prefHeight="30.0" prefWidth="30.0">
+            <HBox.margin>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </HBox.margin></Button>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
         </HBox>
     </top>
 

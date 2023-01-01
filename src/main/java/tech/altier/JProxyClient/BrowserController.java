@@ -23,6 +23,8 @@ public class BrowserController {
     Button menuButton;
     @FXML
     TextField addressBar;
+    @FXML
+    private WebView webView;
 
     private String HOME_URL;
     private Stack<String> history;
@@ -32,7 +34,7 @@ public class BrowserController {
     public void initialize() {
         initializeTopBar();
 
-        WebView webView = new WebView();
+        webView = new WebView();
 
         history = new Stack<>();
         forwardHistory = new Stack<>();
@@ -55,6 +57,7 @@ public class BrowserController {
         Main.logger.logln("Visiting URL: " + url);
         // TODO visit url
 
+        webView.getEngine().loadContent("<html><body><h1>" + url + "</h1></body></html>");
     }
 
     @FXML

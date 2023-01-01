@@ -30,6 +30,9 @@ public class BrowserController {
     public void initialize() {
         initializeTopBar();
 
+        history = new Stack<>();
+        forwardHistory = new Stack<>();
+
         HOME_URL = "https://google.com";    // TODO load from application.properties
 
         visitURL(HOME_URL);

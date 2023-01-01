@@ -69,6 +69,8 @@ public class BrowserController {
     public void handleMenuButtonClick(ActionEvent actionEvent) {
     }
 
+    @FXML
     public void handleAddressBarAction(ActionEvent actionEvent) {
+        System.out.println("Address bar action!");
     }
 }

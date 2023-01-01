@@ -42,7 +42,10 @@ public class BrowserController {
         refreshIcon.setFitWidth(25);
         refreshButton.setGraphic(refreshIcon);
 
-        
+        ImageView menuIcon = new ImageView("menu.png");
+        menuIcon.setFitHeight(25);
+        menuIcon.setFitWidth(25);
+        menuButton.setGraphic(menuIcon);
     }
 
     @FXML

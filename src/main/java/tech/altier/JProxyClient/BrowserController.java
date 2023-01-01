@@ -48,6 +48,11 @@ public class BrowserController {
         } else {
             backButton.setDisable(true);
         }
+        if (forwardHistory.size() > 0) {
+            nextButton.setDisable(false);
+        } else {
+            nextButton.setDisable(true);
+        }
 
         Main.logger.log("Visiting URL: " + url);
         // TODO visit url

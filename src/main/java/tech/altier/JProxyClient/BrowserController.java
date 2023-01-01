@@ -1,5 +1,6 @@
 package tech.altier.JProxyClient;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -172,5 +173,9 @@ public class BrowserController {
         settingsIcon.setFitHeight(25);
         settingsIcon.setFitWidth(25);
         settingsButton.setGraphic(settingsIcon);
+    }
+
+    @FXML
+    public void handleAboutButtonClick() {
     }
 }

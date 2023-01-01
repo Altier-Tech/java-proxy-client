@@ -32,6 +32,11 @@ public class BrowserController {
         backIcon.setFitWidth(25);
         backButton.setGraphic(backIcon);
 
+        ImageView nextIcon = new ImageView("next.png");
+        nextIcon.setFitHeight(25);
+        nextIcon.setFitWidth(25);
+        nextButton.setGraphic(nextIcon);
+
         
     }
 

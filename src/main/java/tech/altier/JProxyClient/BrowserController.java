@@ -49,7 +49,7 @@ public class BrowserController {
 
     @FXML
     public void handleAddressBarAction(ActionEvent actionEvent) {
-        System.out.println("Address bar action!");
+        visitURL();
     }
 
     private void initializeTopBar() {

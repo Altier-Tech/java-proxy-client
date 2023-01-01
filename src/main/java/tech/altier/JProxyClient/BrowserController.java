@@ -39,6 +39,7 @@ public class BrowserController {
         // Adding to stack
         history.push(url);
 
+        Main.logger.log("Visiting URL: " + url);
         // TODO visit url
 
     }

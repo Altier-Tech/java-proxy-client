@@ -57,6 +57,7 @@ public class BrowserController {
 
     @FXML
     public void handleAddressBarAction(ActionEvent actionEvent) {
+//        if (!history.isEmpty()) if (history.peek().equals(addressBar.getText())) reloadPage();
         if (!currentURL.isEmpty()) history.push(currentURL);
         visitURL(addressBar.getText());
     }
@@ -71,7 +72,7 @@ public class BrowserController {
     @FXML
     public void handleNextButtonClick(ActionEvent actionEvent) {
         Main.logger.logln("Next button was clicked!");
-        history.push(currentURL);
+        if (!history.peek().equals(currentURL)) history.push(currentURL);
         visitURL(forwardHistory.pop());
     }
 
@@ -91,6 +92,7 @@ public class BrowserController {
     @FXML
     public void handleHomeButtonClick() {
         Main.logger.logln("Home button was clicked!");
+        if (!history.peek().equals(currentURL)) history.push(currentURL);
         visitURL(HOME_URL);
     }
 

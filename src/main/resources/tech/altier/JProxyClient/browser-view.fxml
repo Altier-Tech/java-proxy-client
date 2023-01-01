@@ -52,10 +52,10 @@
 
     <!-- Menu -->
     <right>
-        <VBox fx:id="rightParent" prefWidth="100.0">
+        <VBox fx:id="rightParent">
             <VBox fx:id="menuBox">
 
-                <!-- Settings -->
+                <!-- Settings button -->
                 <HBox alignment="CENTER_LEFT">
                     <Button fx:id="settingsButton" alignment="CENTER" onAction="#handleSettingsButtonClick" prefHeight="30.0" prefWidth="30.0">
                         <VBox.margin>
@@ -71,7 +71,7 @@
                   </HBox.margin></Label>
                 </HBox>
 
-                <!-- Exit -->
+                <!-- Exit button -->
                 <HBox alignment="CENTER_LEFT">
                     <Button fx:id="exitButton" onAction="#handleExitButtonClick" prefHeight="30.0" prefWidth="30.0">
                         <VBox.margin>

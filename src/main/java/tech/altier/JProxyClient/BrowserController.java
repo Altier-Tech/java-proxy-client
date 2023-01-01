@@ -6,6 +6,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 
+import java.util.Map;
+
 public class BrowserController {
     @FXML
     Button homeButton;
@@ -20,6 +22,8 @@ public class BrowserController {
     @FXML
     TextField addressBar;
 
+    private String HOME_URL;
+
     public void initialize() {
         initializeTopBar();
 
@@ -31,7 +35,8 @@ public class BrowserController {
 
     @FXML
     public void handleHomeButtonClick() {
-        System.out.println("Home button clicked!");
+        Main.logger.logln("Home button was clicked!");
+        visitURL(HOME_URL);
     }
 
     @FXML

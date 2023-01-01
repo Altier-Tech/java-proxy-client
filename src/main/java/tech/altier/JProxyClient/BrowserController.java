@@ -56,7 +56,6 @@ public class BrowserController {
         backButton.setDisable(history.size() == 1 && history.peek().equalsIgnoreCase(HOME_URL));
 
         Main.logger.logln("Visiting URL: " + url);
-        // TODO visit url
 
         engine.load(url);
     }

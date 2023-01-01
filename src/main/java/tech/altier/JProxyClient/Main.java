@@ -12,6 +12,7 @@ import java.io.IOException;
 
 public class Main extends Application {
     public static LogManager logger;
+    public static Stage primaryStage;
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -20,6 +21,7 @@ public class Main extends Application {
         stage.setTitle("JProxy");
         stage.setScene(scene);
         stage.show();
+        primaryStage = stage;
     }
 
     public static void main(String[] args) {

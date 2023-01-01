@@ -25,6 +25,7 @@ public class BrowserController {
 
     private String HOME_URL;
     private Stack<String> history;
+    private Stack<String> forwardHistory;
 
     public void initialize() {
         initializeTopBar();

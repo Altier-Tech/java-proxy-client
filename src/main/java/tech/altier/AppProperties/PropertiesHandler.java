@@ -1,6 +1,6 @@
 package tech.altier.AppProperties;
 
-import tech.altier.JProxy.Main;
+import tech.altier.JProxyClient.Main;
 
 import java.io.FileOutputStream;
 import java.io.IOException;

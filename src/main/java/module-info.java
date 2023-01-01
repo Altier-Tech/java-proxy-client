@@ -1,4 +1,4 @@
-module tech.altier.jproxyclient {
+module tech.altier.JProxyClient {
     requires javafx.controls;
     requires javafx.fxml;
 

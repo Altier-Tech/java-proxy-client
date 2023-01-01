@@ -43,8 +43,11 @@
 
     <!-- Browser view -->
     <center>
-        <WebView fx:id="webView"
-                 layoutX="100.0" layoutY="176.0" prefHeight="400.0" prefWidth="600.0" />
+        <WebView fx:id="webView" >
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+         </BorderPane.margin>
+        </WebView>
     </center>
 
 </BorderPane>

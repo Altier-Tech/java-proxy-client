@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
 import java.util.Stack;
@@ -28,11 +29,13 @@ public class BrowserController {
     private Stack<String> history;
     private Stack<String> forwardHistory;
     private String currentURL;
+    private WebEngine engine;
 
     public void initialize() {
         initializeTopBar();
 
-        webView = new WebView();
+        engine = webView.getEngine();
+        engine.setJavaScriptEnabled(true);
 
         history = new Stack<>();
         forwardHistory = new Stack<>();
@@ -55,7 +58,7 @@ public class BrowserController {
         Main.logger.logln("Visiting URL: " + url);
         // TODO visit url
 
-        webView.getEngine().load("https://www.google.com");
+        engine.load(url);
     }
 
     @FXML
@@ -82,7 +85,7 @@ public class BrowserController {
     @FXML
     public void handleRefreshButtonClick() {
         Main.logger.logln("Refresh button was clicked!");
-        visitURL(currentURL);
+        webView.getEngine().reload();
     }
 
     @FXML

@@ -41,7 +41,7 @@ public class BrowserController {
         visitURL(HOME_URL);
     }
 
-    private void visitURL(String url) { // TODO BUG visit loop
+    private void visitURL(String url) {
         currentURL = url;
 
         // Adding to stack

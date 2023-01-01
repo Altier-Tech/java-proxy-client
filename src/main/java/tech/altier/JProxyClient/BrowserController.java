@@ -36,6 +36,7 @@ public class BrowserController {
     private Stack<String> forwardHistory;
     private String currentURL;
     private WebEngine engine;
+    private boolean menuOpen;
 
     public void initialize() {
         initializeTopBar();

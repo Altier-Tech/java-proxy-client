@@ -163,5 +163,10 @@ public class BrowserController {
         menuIcon.setFitHeight(25);
         menuIcon.setFitWidth(25);
         menuButton.setGraphic(menuIcon);
+
+        ImageView exitIcon = new ImageView("exit.png");
+        exitIcon.setFitHeight(25);
+        exitIcon.setFitWidth(25);
+        exitButton.setGraphic(exitIcon);
     }
 }

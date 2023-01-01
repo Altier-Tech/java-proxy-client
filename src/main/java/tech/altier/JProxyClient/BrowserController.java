@@ -24,7 +24,6 @@ public class BrowserController {
     }
 
     private void visitURL(String url) {
-        
     }
 
     @FXML

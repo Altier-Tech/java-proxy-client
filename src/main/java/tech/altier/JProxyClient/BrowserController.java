@@ -168,5 +168,10 @@ public class BrowserController {
         exitIcon.setFitHeight(25);
         exitIcon.setFitWidth(25);
         exitButton.setGraphic(exitIcon);
+
+        ImageView settingsIcon = new ImageView("settings.png");
+        settingsIcon.setFitHeight(25);
+        settingsIcon.setFitWidth(25);
+        settingsButton.setGraphic(settingsIcon);
     }
 }

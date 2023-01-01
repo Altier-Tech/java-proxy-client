@@ -39,6 +39,7 @@ public class BrowserController {
         history.push(url);
 
         // TODO visit url
+        
     }
 
     @FXML

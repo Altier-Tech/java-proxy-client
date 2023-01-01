@@ -68,7 +68,7 @@ public class BrowserController {
     }
 
     @FXML
-    public void handleSettingsButtonClick(ActionEvent actionEvent) {
+    public void handleSettingsButtonClick() {
     }
 
     @FXML

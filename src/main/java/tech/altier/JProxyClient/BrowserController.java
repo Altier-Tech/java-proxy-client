@@ -176,6 +176,8 @@ public class BrowserController {
     }
 
     @FXML
-    public void handleAboutButtonClick() {
+    public void handleAboutButtonClick(ActionEvent actionEvent) {
+        Main.logger.logln("About button was clicked!");
+        engine.load("http://about.altier.tech");
     }
 }

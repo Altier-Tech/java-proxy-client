@@ -10,7 +10,7 @@
         <Button fx:id="homeButton" onAction="#handleHomeButtonClick" prefHeight="30.0" prefWidth="30.0" />
         <Button fx:id="backButton" onAction="#handleBackButtonClick" prefHeight="30.0" prefWidth="30.0" />
         <Button fx:id="forwardButton" onAction="#handleForwardButtonClick" prefHeight="30.0" prefWidth="30.0" />
-        
+        <Button fx:id="refreshButton" onAction="#handleRefreshButtonClick" prefHeight="30.0" prefWidth="30.0" />
     </top>
 
 </BorderPane>

@@ -11,7 +11,7 @@ public class BrowserController {
     @FXML
     Button backButton;
     @FXML
-    Button forwardButton;
+    Button nextButton;
     @FXML
     Button refreshButton;
     @FXML
@@ -40,7 +40,7 @@ public class BrowserController {
     }
 
     @FXML
-    public void handleForwardButtonClick(ActionEvent actionEvent) {
+    public void handleNextButtonClick(ActionEvent actionEvent) {
     }
 
     @FXML

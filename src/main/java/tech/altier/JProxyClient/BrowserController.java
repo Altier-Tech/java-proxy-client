@@ -18,7 +18,7 @@ public class BrowserController {
         homeIcon.setFitWidth(25);
         homeButton.setGraphic(homeIcon);
 
-        
+
     }
 
     @FXML

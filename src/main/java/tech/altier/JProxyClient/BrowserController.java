@@ -44,6 +44,7 @@ public class BrowserController {
         engine = webView.getEngine();
         engine.setJavaScriptEnabled(true);
 
+        // Hiding the menu
         rightParent.getChildren().remove(menuBox);
         menuOpen = false;
 

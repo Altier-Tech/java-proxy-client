@@ -8,7 +8,7 @@ public class BrowserController {
     Button homeButton;
 
     public void initialize() {
-
+        homeButton.setText("Home");
     }
 
     @FXML

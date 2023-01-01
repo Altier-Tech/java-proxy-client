@@ -43,16 +43,8 @@ public class BrowserController {
         history.push(url);
 
         // Set button states
-        if (history.size() > 1) {
-            backButton.setDisable(false);
-        } else {
-            backButton.setDisable(true);
-        }
-        if (forwardHistory.size() > 0) {
-            nextButton.setDisable(false);
-        } else {
-            nextButton.setDisable(true);
-        }
+        backButton.setDisable(history.size() <= 1);
+        nextButton.setDisable(forwardHistory.size() <= 1);
 
         Main.logger.log("Visiting URL: " + url);
         // TODO visit url

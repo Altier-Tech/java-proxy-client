@@ -37,6 +37,11 @@ public class BrowserController {
         nextIcon.setFitWidth(25);
         nextButton.setGraphic(nextIcon);
 
+        ImageView refreshIcon = new ImageView("refresh.png");
+        refreshIcon.setFitHeight(25);
+        refreshIcon.setFitWidth(25);
+        refreshButton.setGraphic(refreshIcon);
+
         
     }
 

@@ -35,4 +35,7 @@ public class BrowserController {
 
     public void handleRefreshButtonClick(ActionEvent actionEvent) {
     }
+
+    public void handleMenuButtonClick(ActionEvent actionEvent) {
+    }
 }

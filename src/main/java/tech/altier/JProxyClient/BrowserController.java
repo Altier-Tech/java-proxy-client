@@ -36,6 +36,7 @@ public class BrowserController {
 
     private void visitURL(String url) {
         // Adding to stack
+        history.push(url);
     }
 
     @FXML

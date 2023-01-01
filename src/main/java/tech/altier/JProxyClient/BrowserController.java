@@ -28,6 +28,8 @@ public class BrowserController {
     private WebView webView;
     @FXML
     private VBox menuBox;
+    @FXML
+    private VBox rightParent;
 
     private String HOME_URL;
     private Stack<String> history;
@@ -59,7 +61,7 @@ public class BrowserController {
         nextButton.setDisable(forwardHistory.isEmpty());
         backButton.setDisable(history.size() == 1 && history.peek().equalsIgnoreCase(HOME_URL));
 
-        menuBox.getChildren().remove(menuBox);
+
 
         Main.logger.logln("Visiting URL: " + url);
 

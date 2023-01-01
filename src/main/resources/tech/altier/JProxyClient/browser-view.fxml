@@ -73,6 +73,19 @@
 
                 <!-- Exit button -->
                 <HBox alignment="CENTER_LEFT">
+                    <Button fx:id="aboutButton" onAction="#handleAboutButtonClick" prefHeight="30.0" prefWidth="30.0">
+                        <VBox.margin>
+                            <Insets bottom="5.0" right="5.0" top="5.0" />
+                        </VBox.margin>
+                        <HBox.margin>
+                            <Insets bottom="5.0" right="5.0" top="5.0" />
+                        </HBox.margin>
+                    </Button>
+                    <Label alignment="CENTER_RIGHT" text="About" />
+                </HBox>
+
+                <!-- Exit button -->
+                <HBox alignment="CENTER_LEFT">
                     <Button fx:id="exitButton" onAction="#handleExitButtonClick" prefHeight="30.0" prefWidth="30.0">
                         <VBox.margin>
                             <Insets bottom="5.0" right="5.0" top="5.0" />

@@ -43,6 +43,8 @@ public class BrowserController {
         engine = webView.getEngine();
         engine.setJavaScriptEnabled(true);
 
+        rightParent.getChildren().remove(menuBox);
+
         history = new Stack<>();
         forwardHistory = new Stack<>();
 
@@ -61,7 +63,7 @@ public class BrowserController {
         nextButton.setDisable(forwardHistory.isEmpty());
         backButton.setDisable(history.size() == 1 && history.peek().equalsIgnoreCase(HOME_URL));
 
-
+        rightParent.getChildren().add(menuBox);
 
         Main.logger.logln("Visiting URL: " + url);
 

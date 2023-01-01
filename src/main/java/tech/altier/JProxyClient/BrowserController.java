@@ -21,6 +21,32 @@ public class BrowserController {
         initializeTopBar();
     }
 
+    @FXML
+    public void handleHomeButtonClick() {
+        System.out.println("Home button clicked!");
+    }
+
+    @FXML
+    public void handleBackButtonClick(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void handleNextButtonClick(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void handleRefreshButtonClick(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void handleMenuButtonClick(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void handleAddressBarAction(ActionEvent actionEvent) {
+        System.out.println("Address bar action!");
+    }
+
     private void initializeTopBar() {
         ImageView homeIcon = new ImageView("home.png");
         homeIcon.setFitHeight(25);
@@ -46,31 +72,5 @@ public class BrowserController {
         menuIcon.setFitHeight(25);
         menuIcon.setFitWidth(25);
         menuButton.setGraphic(menuIcon);
-    }
-
-    @FXML
-    public void handleHomeButtonClick() {
-        System.out.println("Home button clicked!");
-    }
-
-    @FXML
-    public void handleBackButtonClick(ActionEvent actionEvent) {
-    }
-
-    @FXML
-    public void handleNextButtonClick(ActionEvent actionEvent) {
-    }
-
-    @FXML
-    public void handleRefreshButtonClick(ActionEvent actionEvent) {
-    }
-
-    @FXML
-    public void handleMenuButtonClick(ActionEvent actionEvent) {
-    }
-
-    @FXML
-    public void handleAddressBarAction(ActionEvent actionEvent) {
-        System.out.println("Address bar action!");
     }
 }

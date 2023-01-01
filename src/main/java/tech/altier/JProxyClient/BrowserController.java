@@ -68,6 +68,9 @@ public class BrowserController {
 
     @FXML
     public void handleRefreshButtonClick(ActionEvent actionEvent) {
+        Main.logger.logln("Refresh button was clicked!");
+        // TODO refresh page
+        
     }
 
     @FXML

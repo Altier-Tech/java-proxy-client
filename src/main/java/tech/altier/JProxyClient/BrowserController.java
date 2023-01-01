@@ -27,7 +27,12 @@ public class BrowserController {
         homeIcon.setFitWidth(25);
         homeButton.setGraphic(homeIcon);
 
+        ImageView backIcon = new ImageView("back.png");
+        backIcon.setFitHeight(25);
+        backIcon.setFitWidth(25);
+        backButton.setGraphic(backIcon);
 
+        
     }
 
     @FXML

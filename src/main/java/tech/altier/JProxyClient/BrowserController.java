@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
@@ -25,6 +26,8 @@ public class BrowserController {
     TextField addressBar;
     @FXML
     private WebView webView;
+    @FXML
+    private VBox menuBox;
 
     private String HOME_URL;
     private Stack<String> history;

@@ -7,6 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 
 import java.util.Map;
+import java.util.Stack;
 
 public class BrowserController {
     @FXML
@@ -23,6 +24,7 @@ public class BrowserController {
     TextField addressBar;
 
     private String HOME_URL;
+    private Stack<String> history;
 
     public void initialize() {
         initializeTopBar();

@@ -5,6 +5,9 @@
 <BorderPane xmlns:fx="http://javafx.com/fxml"
             fx:controller="tech.altier.JProxyClient.BrowserController">
 
-    
+    <!-- Browser controls -->
+    <top>
+
+    </top>
 
 </BorderPane>

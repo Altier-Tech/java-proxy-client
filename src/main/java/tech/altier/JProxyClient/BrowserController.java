@@ -31,6 +31,7 @@ public class BrowserController {
     public void handleBackButtonClick(ActionEvent actionEvent) {
     }
 
+    @FXML
     public void handleForwardButtonClick(ActionEvent actionEvent) {
     }
 

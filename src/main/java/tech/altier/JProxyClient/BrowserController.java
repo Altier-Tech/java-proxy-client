@@ -131,4 +131,7 @@ public class BrowserController {
         menuIcon.setFitWidth(25);
         menuButton.setGraphic(menuIcon);
     }
+
+    public void handleSettingsButtonClick(ActionEvent actionEvent) {
+    }
 }

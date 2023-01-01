@@ -1,4 +1,4 @@
-package tech.altier.jproxyclient;
+package tech.altier.JProxyClient;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

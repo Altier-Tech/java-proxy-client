@@ -68,4 +68,7 @@ public class BrowserController {
     @FXML
     public void handleMenuButtonClick(ActionEvent actionEvent) {
     }
+
+    public void handleAddressBarAction(ActionEvent actionEvent) {
+    }
 }

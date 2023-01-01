@@ -3,6 +3,7 @@ package tech.altier.JProxyClient;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 
 public class BrowserController {
@@ -16,6 +17,8 @@ public class BrowserController {
     Button refreshButton;
     @FXML
     Button menuButton;
+    @FXML
+    TextField addressBar;
 
     public void initialize() {
         initializeTopBar();

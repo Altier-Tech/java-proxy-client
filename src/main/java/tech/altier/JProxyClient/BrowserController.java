@@ -38,8 +38,8 @@ public class BrowserController {
         tempLastURL = "";
         HOME_URL = "https://google.com";    // TODO load from application.properties
         currentURL = HOME_URL;
-        
-        visitURL(HOME_URL);
+
+        visitURL(currentURL);
     }
 
     private void visitURL(String url) {

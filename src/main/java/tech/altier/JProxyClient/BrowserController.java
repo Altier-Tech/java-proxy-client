@@ -72,6 +72,10 @@ public class BrowserController {
     }
 
     @FXML
+    public void handleSettingsButtonClick(ActionEvent actionEvent) {
+    }
+
+    @FXML
     public void handleAddressBarAction() {
 //        if (!history.isEmpty()) if (history.peek().equals(addressBar.getText())) reloadPage();
         if (!currentURL.isEmpty()) history.push(currentURL);
@@ -130,9 +134,5 @@ public class BrowserController {
         menuIcon.setFitHeight(25);
         menuIcon.setFitWidth(25);
         menuButton.setGraphic(menuIcon);
-    }
-
-    @FXML
-    public void handleSettingsButtonClick(ActionEvent actionEvent) {
     }
 }

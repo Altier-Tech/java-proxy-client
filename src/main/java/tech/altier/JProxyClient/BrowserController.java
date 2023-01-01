@@ -58,6 +58,22 @@ public class BrowserController {
         visitURL(currentURL);
     }
 
+    @FXML
+    public void handleMenuButtonClick() {
+        Main.logger.logln("Menu button was clicked!");
+
+        {
+            menuOpen = true;
+            rightParent.getChildren().add(menuBox);
+        }
+    }
+
+    @FXML
+    public void handleSettingsButtonClick() {
+        Main.logger.logln("Settings button was clicked!");
+        menuBox.setVisible(true);
+    }
+
     private void visitURL(String url) {
         currentURL = url;
 
@@ -69,20 +85,6 @@ public class BrowserController {
         Main.logger.logln("Visiting URL: " + url);
 
         engine.load(url);
-    }
-
-    @FXML
-    public void handleMenuButtonClick() {
-        Main.logger.logln("Menu button was clicked!");
-        // TODO show menu
-
-        rightParent.getChildren().add(menuBox);
-    }
-
-    @FXML
-    public void handleSettingsButtonClick() {
-        Main.logger.logln("Settings button was clicked!");
-        menuBox.setVisible(true);
     }
 
     @FXML

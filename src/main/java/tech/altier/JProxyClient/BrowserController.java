@@ -11,5 +11,8 @@ public class BrowserController {
 
     }
 
-    
+    @FXML
+    public void handleHomeButtonClick() {
+        System.out.println("Home button clicked!");
+    }
 }

@@ -39,7 +39,7 @@ public class BrowserController {
         history.push(url);
 
         // TODO visit url
-        
+
     }
 
     @FXML
@@ -50,6 +50,7 @@ public class BrowserController {
 
     @FXML
     public void handleBackButtonClick(ActionEvent actionEvent) {
+        visitURL(history.pop());
     }
 
     @FXML

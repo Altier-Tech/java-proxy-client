@@ -9,10 +9,16 @@ public class BrowserController {
     Button homeButton;
 
     public void initialize() {
+        initializeTopBar();
+    }
+
+    private void initializeTopBar() {
         ImageView homeIcon = new ImageView("home.png");
         homeIcon.setFitHeight(25);
         homeIcon.setFitWidth(25);
         homeButton.setGraphic(homeIcon);
+
+        
     }
 
     @FXML

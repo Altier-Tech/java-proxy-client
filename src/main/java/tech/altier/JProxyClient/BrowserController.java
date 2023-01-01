@@ -27,6 +27,7 @@ public class BrowserController {
     private Stack<String> history;
     private Stack<String> forwardHistory;
     private String currentURL;
+    private String tempLastURL;
 
     public void initialize() {
         initializeTopBar();
@@ -34,17 +35,17 @@ public class BrowserController {
         history = new Stack<>();
         forwardHistory = new Stack<>();
 
+        tempLastURL = "";
         HOME_URL = "https://google.com";    // TODO load from application.properties
 
         visitURL(HOME_URL);
     }
 
-    private void visitURL(String url) {
+    private void visitURL(String url) { // TODO BUG visit loop
         currentURL = url;
-        
+
         // Adding to stack
-//        if (history.isEmpty()) history.push(url);
-//        else if (!tempLastVisitedURL.equalsIgnoreCase(url)) history.push(url);
+        if (!tempLastURL.equals(currentURL)) history.push(url);
 
         // Set button states
         backButton.setDisable(history.size() <= 1);

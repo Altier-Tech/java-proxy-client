@@ -100,7 +100,7 @@ public class BrowserController {
 
     @FXML
     public void handleAddressBarAction() {
-//        if (!history.isEmpty()) if (history.peek().equals(addressBar.getText())) reloadPage();
+        if (!history.isEmpty()) if (history.peek().equals(addressBar.getText())) engine.reload();
         if (!currentURL.isEmpty()) history.push(currentURL);
         visitURL(addressBar.getText());
     }

@@ -37,12 +37,12 @@ public class BrowserController {
         nextIcon.setFitWidth(25);
         nextButton.setGraphic(nextIcon);
 
-        ImageView refreshIcon = new ImageView("reload.ico");
+        ImageView refreshIcon = new ImageView("refresh.png");
         refreshIcon.setFitHeight(25);
         refreshIcon.setFitWidth(25);
         refreshButton.setGraphic(refreshIcon);
 
-        ImageView menuIcon = new ImageView("menu.ico");
+        ImageView menuIcon = new ImageView("menu.png");
         menuIcon.setFitHeight(25);
         menuIcon.setFitWidth(25);
         menuButton.setGraphic(menuIcon);

@@ -7,5 +7,9 @@ public class BrowserController {
     @FXML
     Button homeButton;
 
+    public void initialize() {
+
+    }
+
     
 }

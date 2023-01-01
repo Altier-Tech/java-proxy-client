@@ -45,9 +45,6 @@ public class BrowserController {
     private void visitURL(String url) {
         currentURL = url;
 
-        // Adding to stack
-//        if (!tempLastURL.equals(currentURL)) history.push(url);
-
         // Set button states
         backButton.setDisable(history.size() <= 1);
         nextButton.setDisable(forwardHistory.isEmpty());

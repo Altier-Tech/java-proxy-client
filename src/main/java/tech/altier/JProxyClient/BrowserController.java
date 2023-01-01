@@ -68,12 +68,6 @@ public class BrowserController {
     }
 
     @FXML
-    public void handleExitButtonClick(ActionEvent actionEvent) {
-        Main.logger.logln("Exit button was clicked!");
-        Main.primaryStage.close();
-    }
-
-    @FXML
     public void handleSettingsButtonClick(ActionEvent actionEvent) {
     }
 
@@ -109,6 +103,12 @@ public class BrowserController {
         Main.logger.logln("Home button was clicked!");
         if (!history.peek().equals(currentURL)) history.push(currentURL);
         visitURL(HOME_URL);
+    }
+
+    @FXML
+    public void handleExitButtonClick(ActionEvent actionEvent) {
+        Main.logger.logln("Exit button was clicked!");
+        Main.primaryStage.close();
     }
 
     private void initializeTopBar() {

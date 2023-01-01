@@ -57,7 +57,7 @@ public class BrowserController {
 
     @FXML
     public void handleAddressBarAction(ActionEvent actionEvent) {
-        if (! currentURL.isBlank()) history.push(currentURL);
+        if (!currentURL.isEmpty()) history.push(currentURL);
         visitURL(addressBar.getText());
     }
 

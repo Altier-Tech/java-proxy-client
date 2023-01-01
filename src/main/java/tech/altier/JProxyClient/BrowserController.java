@@ -74,9 +74,8 @@ public class BrowserController {
     @FXML
     public void handleNextButtonClick(ActionEvent actionEvent) {
         Main.logger.logln("Next button was clicked!");
-        String url = forwardHistory.pop();
-        history.push(url);
-        visitURL(url);
+        history.push(currentURL);
+        visitURL(forwardHistory.pop());
     }
 
     @FXML

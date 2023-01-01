@@ -52,7 +52,7 @@
 
     <!-- Menu -->
     <right>
-        <VBox>
+        <VBox fx:id="menuBox">
             <Button fx:id="settingsButton" onAction="#handleSettingsButtonClick" prefHeight="30.0" prefWidth="30.0">
             <VBox.margin>
                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />

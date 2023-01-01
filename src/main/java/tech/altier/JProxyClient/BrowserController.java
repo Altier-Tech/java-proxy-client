@@ -45,6 +45,7 @@ public class BrowserController {
         engine.setJavaScriptEnabled(true);
 
         rightParent.getChildren().remove(menuBox);
+        menuOpen = false;
 
         history = new Stack<>();
         forwardHistory = new Stack<>();

@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import tech.altier.Logger.LogManager;
+import tech.altier.Logger.LoggerType;
 
 import java.io.IOException;
 
@@ -21,7 +22,7 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-        logger = new LogManager();
+        logger = new LogManager(LoggerType.CONSOLE);
         launch();
     }
 }

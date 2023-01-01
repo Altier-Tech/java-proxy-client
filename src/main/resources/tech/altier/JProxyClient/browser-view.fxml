@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
-<BorderPane xmlns:fx="http://javafx.com/fxml"
-            fx:controller="tech.altier.JProxyClient.BrowserController">
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="tech.altier.JProxyClient.BrowserController">
 
     <!-- Browser controls -->
     <top>
-        <Button fx:id="homeButton" onAction="#handleHomeButtonClick" />
+        <Button fx:id="homeButton" onAction="#handleHomeButtonClick" prefHeight="30.0" prefWidth="30.0" />
     </top>
 
 </BorderPane>

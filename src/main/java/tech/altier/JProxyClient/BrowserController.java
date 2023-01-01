@@ -51,7 +51,9 @@ public class BrowserController {
 
     @FXML
     public void handleBackButtonClick(ActionEvent actionEvent) {
-        visitURL(history.pop());
+        String url = history.pop();
+        forwardHistory.push(url);
+        visitURL(url);
     }
 
     @FXML

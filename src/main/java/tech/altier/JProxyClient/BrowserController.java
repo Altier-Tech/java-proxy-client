@@ -6,7 +6,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 
-import java.util.Map;
+import javafx.scene.web.*;
+
 import java.util.Stack;
 
 public class BrowserController {
@@ -30,6 +31,8 @@ public class BrowserController {
 
     public void initialize() {
         initializeTopBar();
+
+        WebView webView = new WebView();
 
         history = new Stack<>();
         forwardHistory = new Stack<>();

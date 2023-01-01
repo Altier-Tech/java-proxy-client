@@ -27,6 +27,7 @@ public class BrowserController {
         System.out.println("Home button clicked!");
     }
 
+    @FXML
     public void handleBackButtonClick(ActionEvent actionEvent) {
     }
 

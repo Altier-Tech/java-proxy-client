@@ -27,7 +27,9 @@ public class BrowserController {
     public void initialize() {
         initializeTopBar();
 
-        visitURL("https://google.com");
+        HOME_URL = "https://google.com";
+
+        visitURL(HOME_URL);
     }
 
     private void visitURL(String url) {

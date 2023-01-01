@@ -40,7 +40,8 @@ public class BrowserController {
 
     private void visitURL(String url) {
         // Adding to stack
-        if (history.isEmpty() || (history.peek().equalsIgnoreCase(url))) history.push(url);
+        if (history.isEmpty()) history.push(url);
+        else if (!history.peek().equals(url)) history.push(url);
 
         // Set button states
         backButton.setDisable(history.size() <= 1);
@@ -50,12 +51,6 @@ public class BrowserController {
         Main.logger.log("Visiting URL: " + url);
         // TODO visit url
 
-    }
-
-    @FXML
-    public void handleHomeButtonClick() {
-        Main.logger.logln("Home button was clicked!");
-        visitURL(HOME_URL);
     }
 
     @FXML
@@ -85,6 +80,12 @@ public class BrowserController {
     public void handleMenuButtonClick(ActionEvent actionEvent) {
         Main.logger.logln("Menu button was clicked!");
         // TODO show menu
+    }
+
+    @FXML
+    public void handleHomeButtonClick() {
+        Main.logger.logln("Home button was clicked!");
+        visitURL(HOME_URL);
     }
 
     @FXML

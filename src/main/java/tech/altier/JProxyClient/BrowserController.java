@@ -27,6 +27,8 @@ public class BrowserController {
     @FXML
     Button exitButton;
     @FXML
+    Button settingsButton;
+    @FXML
     private WebView webView;
     @FXML
     private VBox menuBox;

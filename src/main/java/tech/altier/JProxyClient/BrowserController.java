@@ -132,6 +132,7 @@ public class BrowserController {
         menuButton.setGraphic(menuIcon);
     }
 
+    @FXML
     public void handleSettingsButtonClick(ActionEvent actionEvent) {
     }
 }

@@ -51,16 +51,22 @@
     </center>
 
     <!-- Menu -->
-    <right >
+    <right>
         <VBox fx:id="rightParent">
             <VBox fx:id="menuBox">
-                <Button fx:id="settingsButton" onAction="#handleSettingsButtonClick" prefHeight="30.0" prefWidth="30.0">
+
+                <!-- Settings -->
+                <HBox>
+                    <Button fx:id="settingsButton" onAction="#handleSettingsButtonClick" prefHeight="30.0" prefWidth="30.0" text="Settings">
+                        <VBox.margin>
+                            <Insets bottom="5.0" right="5.0" top="5.0" />
+                        </VBox.margin>
+                    </Button>
+                </HBox>
+
+                <Button fx:id="exitButton" onAction="#handleExitButtonClick" prefHeight="30.0" prefWidth="30.0" text="Exit">
                     <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                    </VBox.margin></Button>
-                <Button fx:id="exitButton" onAction="#handleExitButtonClick" prefHeight="30.0" prefWidth="30.0">
-                    <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        <Insets bottom="5.0" right="5.0" top="5.0" />
                     </VBox.margin></Button>
                 <padding>
                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />

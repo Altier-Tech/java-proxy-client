@@ -3,6 +3,7 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
 
 <BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tech.altier.JProxyClient.BrowserController">
 
@@ -42,7 +43,7 @@
 
     <!-- Browser view -->
     <center>
-        <WebView fx:id="browserView" />
+        <WebView fx:id="webView" />
     </center>
 
 </BorderPane>

@@ -1,5 +1,6 @@
 package tech.altier.JProxyClient;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -61,6 +62,12 @@ public class BrowserController {
     }
 
     @FXML
+    public void handleMenuButtonClick() {
+        Main.logger.logln("Menu button was clicked!");
+        // TODO show menu
+    }
+
+    @FXML
     public void handleAddressBarAction() {
 //        if (!history.isEmpty()) if (history.peek().equals(addressBar.getText())) reloadPage();
         if (!currentURL.isEmpty()) history.push(currentURL);
@@ -85,12 +92,6 @@ public class BrowserController {
     public void handleRefreshButtonClick() {
         Main.logger.logln("Refresh button was clicked!");
         webView.getEngine().reload();
-    }
-
-    @FXML
-    public void handleMenuButtonClick() {
-        Main.logger.logln("Menu button was clicked!");
-        // TODO show menu
     }
 
     @FXML
@@ -125,5 +126,9 @@ public class BrowserController {
         menuIcon.setFitHeight(25);
         menuIcon.setFitWidth(25);
         menuButton.setGraphic(menuIcon);
+    }
+
+    @FXML
+    public void handleExitButtonClick(ActionEvent actionEvent) {
     }
 }

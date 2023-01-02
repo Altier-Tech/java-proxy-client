@@ -77,7 +77,6 @@ public class BrowserController {
 
         Main.logger.logln("Visiting URL: " + url);
 
-//        engine.load(url);
         String response = "";
 
         // Send the request
@@ -86,6 +85,8 @@ public class BrowserController {
         } catch (IOException e) {
             Main.logger.error("Error sending request: " + e.getMessage());
         }
+        
+//        engine.load(url);
     }
 
     @FXML

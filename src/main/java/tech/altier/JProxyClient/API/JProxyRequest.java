@@ -2,6 +2,7 @@ package tech.altier.JProxyClient.API;
 
 import tech.altier.JProxyClient.Main;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
@@ -33,7 +34,12 @@ public class JProxyRequest implements Runnable {
             Main.logger.error(e.getMessage());
         }
 
-        socket.close();
+        try {
+            socket.close();
+        } catch (IOException e) {
+            Main.logger.error(e.getMessage());
+        }
+
         response = responseBuilder.toString();
     }
 }

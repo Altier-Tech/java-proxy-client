@@ -16,10 +16,6 @@ public class Main extends Application {
     public static Stage primaryStage;
     public static Scene mainScene;
 
-    public static void setTitle(String url) {
-
-    }
-
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("browser-view.fxml"));
@@ -34,5 +30,9 @@ public class Main extends Application {
     public static void main(String[] args) {
         logger = new LogManager(LoggerType.CONSOLE);
         launch();
+    }
+
+    public static void setTitle(String url) {
+
     }
 }

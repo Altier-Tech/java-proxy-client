@@ -6,14 +6,19 @@ public class BuildRequest {
     private final String version;
     private final String body;
 
-    public BuildRequest(String method, String endPoint, String version, String body) {
+    BuildRequest(String method, String endPoint, String version, String body) {
         this.method = method;
         this.endPoint = endPoint;
         this.version = version;
         this.body = body;
     }
 
-    public BuildRequest(String endPoint, String body) {
+    BuildRequest(String endPoint, String body) {
+        this("GET", endPoint, "HTTP/1.1", body);
+    }
+
+    BuildRequest(String endPoint) {
+        String body = 
         this("GET", endPoint, "HTTP/1.1", body);
     }
 

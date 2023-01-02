@@ -42,7 +42,7 @@ public class JProxyClient {
     }
 
     private static String buildRequestBody(String endpoint) {
-        return  "{\n" +
+        return "{\n" +
                 "  \"method\": \"GET\",\n" +
                 "  \"endpoint\": \"" + endpoint + "\",\n" +
                 "  \"version\": \" HTTP/1.1\",\n" +

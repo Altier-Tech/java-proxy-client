@@ -22,7 +22,7 @@ public class JProxyClient {
         URL url = new URL(SERVER_ADDRESS);   // TODO load this from application.properties
         URLConnection con = url.openConnection();
         HttpURLConnection http = (HttpURLConnection) con;
-        http.setRequestMethod("POST"); // PUT is another valid option
+        http.setRequestMethod("POST"); 
         http.setDoOutput(true);
 
         String requestBody = buildRequestBody(endpoint);

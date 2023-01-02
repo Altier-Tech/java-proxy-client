@@ -78,10 +78,11 @@ public class BrowserController {
         Main.logger.logln("Visiting URL: " + url);
 
 //        engine.load(url);
+        String response = "";
 
         // Send the request
         try {
-            System.out.println(JProxyClient.send(url));
+            response = JProxyClient.send(url);
         } catch (IOException e) {
             Main.logger.error("Error sending request: " + e.getMessage());
         }

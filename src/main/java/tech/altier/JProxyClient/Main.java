@@ -33,7 +33,7 @@ public class Main extends Application {
         launch();
     }
 
-    public static void setTitle(String url) {
+    public static void setTitle(String url) { // TODO bug
         Stage mainStage = (Stage) mainScene.getWindow();
         mainStage.setTitle(url.substring(7, url.length() - 1));
     }

@@ -1,5 +1,7 @@
 package tech.altier.JProxyClient.API;
 
+import tech.altier.JProxyClient.Main;
+
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
@@ -20,12 +22,14 @@ public class JProxyRequest implements Runnable {
             os.write(request.getBytes());
             os.flush();
         } catch (Exception e) {
-            e.printStackTrace();
+            Main.logger.error(e.getMessage());
         }
 
         try (InputStream is = socket.getInputStream()) {
             int ch;
             while( (ch=is.read())!= -1) System.out.print((char)ch);
+        } catch (Exception e) {
+            Main.logger.error(e.getMessage());
         }
 
         socket.close();

@@ -15,7 +15,7 @@ import java.util.Stack;
 
 public class BrowserController {
     @FXML
-    public Button aboutButton;
+    Button aboutButton;
     @FXML
     Button homeButton;
     @FXML
@@ -188,10 +188,15 @@ public class BrowserController {
         settingsIcon.setFitHeight(25);
         settingsIcon.setFitWidth(25);
         settingsButton.setGraphic(settingsIcon);
+
+        ImageView aboutIcon = new ImageView("about.png");
+        aboutIcon.setFitHeight(25);
+        aboutIcon.setFitWidth(25);
+        aboutButton.setGraphic(aboutIcon);
     }
 
     @FXML
-    public void handleAboutButtonClick(ActionEvent actionEvent) {
+    public void handleAboutButtonClick() {
         Main.logger.logln("About button was clicked!");
         engine.load(ABOUT_URL);
     }

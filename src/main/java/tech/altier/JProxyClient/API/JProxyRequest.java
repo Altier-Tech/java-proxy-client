@@ -11,17 +11,17 @@ public class JProxyRequest implements Runnable {
 
     public JProxyRequest(String request) {
         this.request = request;
-        String host = "www.yourhost.com";
-        socket = new Socket(host, 80);
-
+        socket = new Socket("", 80);
     }
 
     @Override
     public void run() {
-        OutputStream os = socket.getOutputStream();
-        os.write(request.getBytes());
-        os.flush();
-        os.close();
+        try (OutputStream os = socket.getOutputStream()) {
+            os.write(request.getBytes());
+            os.flush();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         InputStream is = socket.getInputStream();
         int ch;

@@ -86,9 +86,13 @@ public class BrowserController {
             response = JProxyClient.send(url);
         } catch (IOException e) {
             Main.logger.error("Error sending request: " + e.getMessage());
+            throw new RuntimeException(e);
         }
 
         engine.loadContent(response);
+
+        addressBar.setText(url);
+        Main.setTitle(url);
     }
 
     @FXML

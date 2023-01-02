@@ -85,7 +85,7 @@ public class BrowserController {
 
         // Send the request
         try {
-            JProxyClient.sendRequest(request);
+            System.out.println(JProxyClient.send(request));
         } catch (IOException e) {
             Main.logger.error("Error sending request: " + e.getMessage());
         }

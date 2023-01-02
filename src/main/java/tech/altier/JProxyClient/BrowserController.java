@@ -61,7 +61,7 @@ public class BrowserController {
         forwardHistory = new Stack<>();
 
         // TODO load from application.properties
-        HOME_URL = "https://www.google.lk/";
+        HOME_URL = "https://www.youtube.lk/";
         ABOUT_URL = "http://about.altier.tech/";
         currentURL = HOME_URL;
 

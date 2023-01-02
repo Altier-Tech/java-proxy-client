@@ -41,5 +41,6 @@ public class JProxyRequest implements Runnable {
         }
 
         response = responseBuilder.toString();
+        System.out.println(response);
     }
 }

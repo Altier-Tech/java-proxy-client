@@ -65,6 +65,19 @@ public class BrowserController {
         visitURL(currentURL);
     }
 
+    private void visitURL(String url) {
+        currentURL = url;
+
+        // Set button states
+        backButton.setDisable(history.size() <= 1);
+        nextButton.setDisable(forwardHistory.isEmpty());
+        backButton.setDisable(history.size() == 1 && history.peek().equalsIgnoreCase(HOME_URL));
+
+        Main.logger.logln("Visiting URL: " + url);
+
+        engine.load(url);
+    }
+
     @FXML
     public void handleMenuButtonClick() {
         Main.logger.logln("Menu button was clicked!");
@@ -85,19 +98,6 @@ public class BrowserController {
     public void handleSettingsButtonClick() {
         Main.logger.logln("Settings button was clicked!");
         menuBox.setVisible(true);
-    }
-
-    private void visitURL(String url) {
-        currentURL = url;
-
-        // Set button states
-        backButton.setDisable(history.size() <= 1);
-        nextButton.setDisable(forwardHistory.isEmpty());
-        backButton.setDisable(history.size() == 1 && history.peek().equalsIgnoreCase(HOME_URL));
-
-        Main.logger.logln("Visiting URL: " + url);
-
-        engine.load(url);
     }
 
     @FXML

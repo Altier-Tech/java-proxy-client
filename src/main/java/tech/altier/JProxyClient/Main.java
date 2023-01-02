@@ -25,6 +25,7 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.show();
         primaryStage = stage;
+        mainScene = scene;
     }
 
     public static void main(String[] args) {
@@ -33,6 +34,7 @@ public class Main extends Application {
     }
 
     public static void setTitle(String url) {
-
+        Stage mainStage = (Stage) mainScene.getWindow();
+        mainStage.setTitle(url.substring(7, url.length() - 1));
     }
 }

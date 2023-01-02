@@ -13,6 +13,8 @@ public class JProxyClient {
     }
 
     public static String send(String request) throws IOException {
+        System.out.println("\n\n" + request + "\n\n");
+
         URL url = new URL("http://localhost:8080");
         URLConnection con = url.openConnection();
         HttpURLConnection http = (HttpURLConnection) con;
@@ -23,7 +25,7 @@ public class JProxyClient {
         int length = out.length;
 
         http.setFixedLengthStreamingMode(length);
-        http.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
+//        http.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
         http.connect();
         try(OutputStream os = http.getOutputStream()) {
             os.write(out);

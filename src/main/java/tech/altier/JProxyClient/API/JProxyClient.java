@@ -13,7 +13,7 @@ public class JProxyClient {
     }
 
     public static String send(String request) throws IOException {
-        URL url = new URL("https://www.example.com/login");
+        URL url = new URL("http://localhost:8080");
         URLConnection con = url.openConnection();
         HttpURLConnection http = (HttpURLConnection)con;
         http.setRequestMethod("POST"); // PUT is another valid option

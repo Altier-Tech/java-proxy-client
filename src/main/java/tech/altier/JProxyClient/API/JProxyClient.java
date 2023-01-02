@@ -25,9 +25,9 @@ public class JProxyClient {
         http.setRequestMethod("POST"); // PUT is another valid option
         http.setDoOutput(true);
 
-        request = buildRequestBody(endpoint);
+        String requestBody = buildRequestBody(endpoint);
 
-        byte[] out = request.getBytes(StandardCharsets.UTF_8);
+        byte[] out = requestBody.getBytes(StandardCharsets.UTF_8);
         int length = out.length;
 
         http.setFixedLengthStreamingMode(length);

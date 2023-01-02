@@ -84,7 +84,11 @@ public class BrowserController {
         String request = (new BuildRequest(url)).build();
 
         // Send the request
-        JProxyClient.sendRequest(request);
+        try {
+            JProxyClient.sendRequest(request);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

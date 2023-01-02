@@ -15,7 +15,7 @@ public class JProxyClient {
         requestThread.start();
     }
 
-    public static void send(String request) throws IOException {
+    public static String send(String request) throws IOException {
         URL url = new URL("https://www.example.com/login");
         URLConnection con = url.openConnection();
         HttpURLConnection http = (HttpURLConnection)con;
@@ -33,6 +33,6 @@ public class JProxyClient {
         }
 
         InputStream is = http.getInputStream();
-        String response = new String(is.readAllBytes());
+        return new String(is.readAllBytes());
     }
 }

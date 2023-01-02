@@ -26,8 +26,9 @@ public class JProxyRequest implements Runnable {
 
         InputStream is = socket.getInputStream();
         int ch;
-        while( (ch=is.read())!= -1)
-            System.out.print((char)ch);
+        while( (ch=is.read())!= -1) System.out.print((char)ch);
+        is.close();
+        
         socket.close();
     }
 }

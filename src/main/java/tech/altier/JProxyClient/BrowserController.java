@@ -8,6 +8,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
+import tech.altier.JProxyClient.API.JProxyClient;
 import tech.altier.JProxyClient.API.JProxyRequestBuilder.BuildRequest;
 
 import java.util.Stack;
@@ -82,7 +83,7 @@ public class BrowserController {
         String request = (new BuildRequest(url)).build();
 
         // Send the request
-
+        JProxyClient.sendRequest(request);
     }
 
     @FXML

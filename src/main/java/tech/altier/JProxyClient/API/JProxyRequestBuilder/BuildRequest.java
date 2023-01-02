@@ -23,6 +23,15 @@ public class BuildRequest {
         this("GET", SERVER_ADDRESS, "HTTP/1.1", buildRequestBody(endPoint));
     }
 
+    private static String buildRequestBody(String endPoint) {
+        return "{\n" +
+                "  \"method\": \"GET\",\n" +
+                "  \"endpoint\": \"" + endPoint + "\",\n" +
+                "  \"version\": \"HTTP/1.1\",\n" +
+                "  \"body\": \"\"\n" +
+                "}";
+    }
+
     public String build() {
         return String.format("%s %s %s\r\n\r\n%s", method, endPoint, version, body);
     }

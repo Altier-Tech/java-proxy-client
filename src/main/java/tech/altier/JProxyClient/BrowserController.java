@@ -85,7 +85,7 @@ public class BrowserController {
         } catch (IOException e) {
             Main.logger.error("Error sending request: " + e.getMessage());
         }
-        
+
 //        engine.load(url);
     }
 

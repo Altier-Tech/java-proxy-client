@@ -8,6 +8,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
+import tech.altier.JProxyClient.API.JProxyRequestBuilder.BuildRequest;
 
 import java.util.Stack;
 
@@ -75,7 +76,10 @@ public class BrowserController {
 
         Main.logger.logln("Visiting URL: " + url);
 
-        engine.load(url);
+//        engine.load(url);
+
+        // Build a request
+        String request = (new BuildRequest(url)).build();
     }
 
     @FXML

@@ -23,10 +23,10 @@ public class JProxyRequest implements Runnable {
             e.printStackTrace();
         }
 
-        InputStream is = socket.getInputStream();
-        int ch;
-        while( (ch=is.read())!= -1) System.out.print((char)ch);
-        is.close();
+        try (InputStream is = socket.getInputStream()) {
+            int ch;
+            while( (ch=is.read())!= -1) System.out.print((char)ch);
+        }
 
         socket.close();
     }

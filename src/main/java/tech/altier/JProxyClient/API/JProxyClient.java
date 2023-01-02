@@ -7,6 +7,8 @@ import java.net.*;
 import java.nio.charset.StandardCharsets;
 
 public class JProxyClient {
+    private static final String SERVER_ADDRESS;
+    
     public static void sendRequest(String request) throws IOException {
         Thread requestThread = new Thread(new JProxyRequest(request));
         requestThread.start();

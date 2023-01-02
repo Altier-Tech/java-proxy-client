@@ -15,6 +15,8 @@ import java.util.Stack;
 
 public class BrowserController {
     @FXML
+    public Button aboutButton;
+    @FXML
     Button homeButton;
     @FXML
     Button backButton;

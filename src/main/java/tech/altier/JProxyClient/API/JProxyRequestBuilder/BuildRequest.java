@@ -20,8 +20,7 @@ public class BuildRequest {
     }
 
     BuildRequest(String endPoint) {
-        String body = RequestBodyBuilder.buildRequestBody(endPoint);
-        this("GET", SERVER_ADDRESS, "HTTP/1.1", body);
+        this("GET", SERVER_ADDRESS, "HTTP/1.1", RequestBodyBuilder.buildRequestBody(endPoint));
     }
 
     public String build() {

@@ -7,13 +7,12 @@ import java.net.Socket;
 
 public class JProxyRequest implements Runnable {
     private final String request;
+    private Socket socket;
 
     public JProxyRequest(String request) {
         this.request = request;
         String host = "www.yourhost.com";
-        Socket socket = new Socket(host, 80);
-
-
+        socket = new Socket(host, 80);
 
     }
 
@@ -28,7 +27,7 @@ public class JProxyRequest implements Runnable {
         int ch;
         while( (ch=is.read())!= -1) System.out.print((char)ch);
         is.close();
-        
+
         socket.close();
     }
 }

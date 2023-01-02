@@ -12,15 +12,13 @@ public class JProxyClient {
     static {
         SERVER_ADDRESS = "http://localhost:8080";   // TODO load this from application.properties
     }
-    
+
     public static void sendRequest(String request) throws IOException {
         Thread requestThread = new Thread(new JProxyRequest(request));
         requestThread.start();
     }
 
     public static String send(String request) throws IOException {
-        System.out.println("\n\n" + request + "\n\n");
-
         URL url = new URL(SERVER_ADDRESS);   // TODO load this from application.properties
         URLConnection con = url.openConnection();
         HttpURLConnection http = (HttpURLConnection) con;

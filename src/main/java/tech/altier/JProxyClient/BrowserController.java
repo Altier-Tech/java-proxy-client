@@ -86,7 +86,7 @@ public class BrowserController {
             Main.logger.error("Error sending request: " + e.getMessage());
         }
 
-//        engine.load(url);
+        engine.loadContent(response);
     }
 
     @FXML

@@ -68,7 +68,7 @@ public class BrowserController {
         visitURL(currentURL);
     }
 
-    private void visitURL(String url) throws IOException {
+    private void visitURL(String url) {
         currentURL = url;
 
         // Set button states

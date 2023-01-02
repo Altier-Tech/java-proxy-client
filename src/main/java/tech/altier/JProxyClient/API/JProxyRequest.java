@@ -9,7 +9,7 @@ import java.net.Socket;
 
 public class JProxyRequest implements Runnable {
     private final String request;
-    private Socket socket;
+    private final Socket socket;
     private String response;
 
     public JProxyRequest(String request) throws IOException {

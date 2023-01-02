@@ -9,7 +9,6 @@ import javafx.scene.layout.VBox;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import tech.altier.JProxyClient.API.JProxyClient;
-import tech.altier.JProxyClient.API.JProxyRequestBuilder.BuildRequest;
 
 import java.io.IOException;
 import java.util.Stack;
@@ -80,12 +79,9 @@ public class BrowserController {
 
 //        engine.load(url);
 
-        // Build a request
-        String request = (new BuildRequest(url)).build();
-
         // Send the request
         try {
-            System.out.println(JProxyClient.send(request));
+            System.out.println(JProxyClient.send(url));
         } catch (IOException e) {
             Main.logger.error("Error sending request: " + e.getMessage());
         }

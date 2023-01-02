@@ -12,7 +12,7 @@ public class JProxyRequest implements Runnable {
     private Socket socket;
     private String response;
 
-    public JProxyRequest(String request) {
+    public JProxyRequest(String request) throws IOException {
         this.request = request;
         socket = new Socket("", 80);
     }

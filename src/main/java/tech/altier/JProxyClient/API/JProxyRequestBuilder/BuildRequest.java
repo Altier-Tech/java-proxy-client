@@ -6,6 +6,12 @@ public class BuildRequest {
     private final String version;
     private final String body;
 
+    private static final String SERVER_ADDRESS;
+
+    static {
+        SERVER_ADDRESS = "http://localhost:8080";   // TODO load this from application.properties
+    }
+
     private BuildRequest(String method, String endPoint, String version, String body) {
         this.method = method;
         this.endPoint = endPoint;

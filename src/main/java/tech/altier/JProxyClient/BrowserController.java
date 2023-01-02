@@ -61,7 +61,7 @@ public class BrowserController {
         forwardHistory = new Stack<>();
 
         // TODO load from application.properties
-        HOME_URL = "https://www.youtube.lk/";
+        HOME_URL = "https://www.youtube.com/";
         ABOUT_URL = "http://about.altier.tech/";
         currentURL = HOME_URL;
 
@@ -198,6 +198,6 @@ public class BrowserController {
     @FXML
     public void handleAboutButtonClick() {
         Main.logger.logln("About button was clicked!");
-        engine.load(ABOUT_URL);
+        visitURL(ABOUT_URL);
     }
 }

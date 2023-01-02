@@ -13,13 +13,9 @@ public class BuildRequest {
         this.body = body;
     }
 
-    BuildRequest(String endPoint, String body) {
-        this("GET", endPoint, "HTTP/1.1", body);
-    }
-
     BuildRequest(String endPoint) {
-        String body = 
-        this("GET", endPoint, "HTTP/1.1", body);
+        String body = RequestBodyBuilder.buildRequestBody(endPoint);
+        this("GET", SERVER_ADDRESS, "HTTP/1.1", body);
     }
 
     public String build() {

@@ -82,6 +82,7 @@ public class BrowserController {
         String request = (new BuildRequest(url)).build();
 
         // Send the request
+
     }
 
     @FXML

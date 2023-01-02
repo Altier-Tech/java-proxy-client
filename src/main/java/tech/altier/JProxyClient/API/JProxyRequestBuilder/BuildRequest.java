@@ -25,7 +25,7 @@ public class BuildRequest {
 
     private static String buildRequestBody(String endPoint) {
         return "{\n" +
-                "  \"method\": \" GET\",\n" +
+                "  \"method\": \"GET\",\n" +
                 "  \"endpoint\": \"" + endPoint + "\",\n" +
                 "  \"version\": \" HTTP/1.1\",\n" +
                 "  \"body\": \"\"\n" +

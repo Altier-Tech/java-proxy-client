@@ -14,6 +14,11 @@ import java.io.IOException;
 public class Main extends Application {
     public static LogManager logger;
     public static Stage primaryStage;
+    public static Scene mainScene;
+
+    public static void setTitle(String url) {
+
+    }
 
     @Override
     public void start(Stage stage) throws IOException {

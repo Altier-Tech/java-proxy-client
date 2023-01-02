@@ -15,8 +15,6 @@ import java.util.Stack;
 
 public class BrowserController {
     @FXML
-    Button aboutButton;
-    @FXML
     Button homeButton;
     @FXML
     Button backButton;
@@ -26,6 +24,8 @@ public class BrowserController {
     Button refreshButton;
     @FXML
     Button menuButton;
+    @FXML
+    Button aboutButton;
     @FXML
     TextField addressBar;
     @FXML

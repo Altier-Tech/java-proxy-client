@@ -21,6 +21,13 @@ public class JProxyClient {
         http.setRequestMethod("POST"); // PUT is another valid option
         http.setDoOutput(true);
 
+        request = "{\n" +
+                "  \"method\": \"GET\",\n" +
+                "  \"endpoint\": \"" + "http://www.google.com" + "\",\n" +
+                "  \"version\": \" HTTP/1.1\",\n" +
+                "  \"body\": \"\"\n" +
+                "}";
+
         byte[] out = request.getBytes(StandardCharsets.UTF_8);
         int length = out.length;
 

@@ -8,6 +8,10 @@ import java.nio.charset.StandardCharsets;
 
 public class JProxyClient {
     private static final String SERVER_ADDRESS;
+
+    static {
+        SERVER_ADDRESS = "http://localhost:8080";   // TODO load this from application.properties
+    }
     
     public static void sendRequest(String request) throws IOException {
         Thread requestThread = new Thread(new JProxyRequest(request));

@@ -92,7 +92,7 @@ public class BrowserController {
         engine.loadContent(response);
 
         addressBar.setText(url);
-        Main.setTitle(url);
+//        Main.setTitle(url);
     }
 
     @FXML

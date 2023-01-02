@@ -4,12 +4,12 @@ import tech.altier.JProxyClient.Main;
 
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.net.HttpURLConnection;
 import java.net.Socket;
 
 public class JProxyRequest implements Runnable {
     private final String request;
     private Socket socket;
+    private String response;
 
     public JProxyRequest(String request) {
         this.request = request;
@@ -25,13 +25,15 @@ public class JProxyRequest implements Runnable {
             Main.logger.error(e.getMessage());
         }
 
+        StringBuilder responseBuilder = new StringBuilder();
         try (InputStream is = socket.getInputStream()) {
             int ch;
-            while( (ch=is.read())!= -1) System.out.print((char)ch);
+            while( (ch=is.read())!= -1) responseBuilder.append((char) ch);
         } catch (Exception e) {
             Main.logger.error(e.getMessage());
         }
 
         socket.close();
+        response = responseBuilder.toString();
     }
 }

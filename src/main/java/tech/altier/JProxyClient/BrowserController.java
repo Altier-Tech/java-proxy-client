@@ -87,7 +87,7 @@ public class BrowserController {
         try {
             JProxyClient.sendRequest(request);
         } catch (IOException e) {
-            e.printStackTrace();
+            Main.logger.error("Error sending request: " + e.getMessage());
         }
     }
 

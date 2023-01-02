@@ -6,7 +6,7 @@ public class BuildRequest {
     private final String version;
     private final String body;
 
-    BuildRequest(String method, String endPoint, String version, String body) {
+    private BuildRequest(String method, String endPoint, String version, String body) {
         this.method = method;
         this.endPoint = endPoint;
         this.version = version;

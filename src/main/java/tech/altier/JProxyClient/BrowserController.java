@@ -80,6 +80,8 @@ public class BrowserController {
 
         // Build a request
         String request = (new BuildRequest(url)).build();
+
+        // Send the request
     }
 
     @FXML

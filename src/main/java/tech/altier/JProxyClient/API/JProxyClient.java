@@ -40,4 +40,13 @@ public class JProxyClient {
         InputStream is = http.getInputStream();
         return new String(is.readAllBytes());
     }
+
+    private static String buildRequestBody(String endpoint) {
+        return  "{\n" +
+                "  \"method\": \"GET\",\n" +
+                "  \"endpoint\": \"" + endpoint + "\",\n" +
+                "  \"version\": \" HTTP/1.1\",\n" +
+                "  \"body\": \"\"\n" +
+                "}";
+    }
 }

@@ -11,6 +11,7 @@ import javafx.scene.web.WebView;
 import tech.altier.JProxyClient.API.JProxyClient;
 import tech.altier.JProxyClient.API.JProxyRequestBuilder.BuildRequest;
 
+import java.io.IOException;
 import java.util.Stack;
 
 public class BrowserController {
@@ -67,7 +68,7 @@ public class BrowserController {
         visitURL(currentURL);
     }
 
-    private void visitURL(String url) {
+    private void visitURL(String url) throws IOException {
         currentURL = url;
 
         // Set button states
